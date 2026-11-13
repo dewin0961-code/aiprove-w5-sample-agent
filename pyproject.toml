@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omega-aiprove-sample-agent"
+version = "1.0.0"
+description = "OmegaCipher sample agent for the AIProve Arena (asyncio + aiohttp pipeline)"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.10",
+    "eth-account>=0.13",  # local-signer path only (throwaway/test keys)
+]
+
+[tool.setuptools.packages.find]
+include = ["omega*"]
